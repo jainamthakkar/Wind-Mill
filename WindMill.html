@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wind Mill</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(46, 46, 46);
+    }
+
+    .container {
+        display: grid;
+        width: 80%;
+        height: 90%;
+        background-color: rgb(36, 47, 66);
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    #base {
+        /* display: flex; */
+        position: absolute;
+        bottom: 20%;
+        height: 7%;
+        width: 16%;
+        /* border: 2px solid black; */
+        padding: 10px;
+        background-color: black;
+        border-radius: 10px;
+    }
+
+    #khambha {
+        position: absolute;
+        top: 35%;
+        height: 39%;
+        width: .8%;
+        background-color: black;
+        /* border: 2px solid black; */
+        z-index: 5;
+    }
+
+    #box {
+        position: absolute;
+        top: 33.7%;
+        background-color: black;
+        width: 3%;
+        height: 3.5%;
+        border-radius: 20px;
+        z-index: 45;
+        cursor: pointer;
+    }
+
+    .line {
+        position: absolute;
+        height: 30%;
+        width: .3%;
+        border-radius: 8px;
+        z-index: 10;
+        cursor: pointer;
+    }
+
+    .container:hover .line:first-child(){
+        /* background-color:rgb(255, 255, 255); */
+        animation: spin 2s infinite linear;
+    }    
+    .container:hover .line:nth-child(2){
+        animation: spin 2s infinite linear;
+    }
+    .container:hover .line:nth-child(3){
+        animation: spin 2s infinite linear;
+    }
+    .container:hover .line:nth-child(4){
+        animation: spin 2s infinite linear;
+    }
+    .container:hover .line:nth-child(5){
+        animation: spin 2s infinite linear;
+    } 
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    } 
+
+    /* .line:hover{
+        animation: spin 1s infinite linear;
+        transition: spin 1s ease-in-out;
+    } */
+
+    #line1 {
+        top: 20%;
+        transform: rotate(36deg);
+    }
+
+    #line2 {
+        top: 20%;
+        background-color: rgb(175, 236, 52);
+        transform: rotate(72deg);
+    }
+
+    #line3 {
+        top: 20%;
+        background-color: brown;
+        transform: rotate(108deg);
+    }
+
+    #line4 {
+        top: 20%;
+        background-color: rgb(99, 99, 153);
+        transform: rotate(144deg);
+    }
+
+    #line5 {
+        top: 20%;
+        transform: rotate(180deg);
+        background-color: aliceblue;
+    }
+
+    #line6 {
+        top: 20%;
+        background-color: rgb(128, 74, 74);
+        transform: rotate(216deg);
+    }
+
+    #line7 {
+        top: 20%;
+        background-color: rgb(167, 24, 155);
+        transform: rotate(252deg);
+    }
+
+    #line8 {
+        top: 20%;
+        background-color: rgb(119, 139, 79);
+        transform: rotate(288deg);
+    }
+
+    #line9 {
+        top: 20%;
+        background-color: rgb(25, 216, 51);
+        transform: rotate(324deg);
+    }
+
+    #line10 {
+        top: 20%;
+        background-color: rgb(112, 112, 172);
+        transform: rotate(360deg);
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="line" id="line1"></div>
+        <div class="line" id="line2"></div>
+        <div class="line" id="line3"></div>
+        <div class="line" id="line4"></div>
+        <div class="line" id="line5"></div>
+        <div class="line" id="line6"></div>
+        <div class="line" id="line7"></div>
+        <div class="line" id="line8"></div>
+        <div class="line" id="line9"></div>
+        <div class="line" id="line10"></div>
+        <div id="box"></div>
+        <div id="khambha"></div>
+        <div id="base"></div>
+    </div>
+</body>
+
+</html>
